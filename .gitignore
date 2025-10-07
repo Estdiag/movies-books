@@ -1,0 +1,77 @@
+# ────────────────
+# Node & pnpm
+# ────────────────
+node_modules/
+.pnpm-store/
+.pnpm-debug.log
+.npmrc
+
+# ────────────────
+# Build outputs
+# ────────────────
+dist/
+build/
+out/
+lib/
+coverage/
+
+# ────────────────
+# Logs
+# ────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ────────────────
+# Environment files
+# ────────────────
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ────────────────
+# TypeScript
+# ────────────────
+*.tsbuildinfo
+
+# ────────────────
+# IDE / Editor
+# ────────────────
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ────────────────
+# System
+# ────────────────
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# ────────────────
+# Frontend (React / Vite)
+# ────────────────
+frontend/.vite/
+frontend/node_modules/
+frontend/dist/
+
+# ────────────────
+# Backend (Node / Express)
+# ────────────────
+backend/node_modules/
+backend/dist/
+backend/build/
+
+# ────────────────
+# Shared package (si compilas código TS allí)
+# ────────────────
+package/dist/
+package/build/
+package/node_modules/
