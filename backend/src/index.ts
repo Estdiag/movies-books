@@ -1,13 +1,15 @@
-import express from 'express';
-import path from 'path';
-import dotenv from 'dotenv';
-import { helloShared } from '@package/shared';
+import { ApolloServer } from 'apollo-server';
+import { typeDefs } from './schema/typeDefs';
+import { resolversMovies } from './schema/resolversMovies';
 import { ENV } from './config/env';
 
-const app = express();
+const server = new ApolloServer({ typeDefs, resolvers: resolversMovies });
 
-app.get('/', (_req, res) => {
-  res.send({ msg: helloShared(), env: process.env.API_URL });
+server.listen({ port: ENV.PORT }).then(({ url }) => {
+  console.log(`🚀 Servidor GraphQL listo en ${url}`);
 });
 
-app.listen(ENV.PORT, () => console.log(`Listening ${ENV.PORT}`));
+// sequelize.authenticate()
+//   .then(() => console.log("✅ Conexión a MySQL exitosa"))
+//   .catch((err) => console.error("❌ Error de conexión:", err));
+
