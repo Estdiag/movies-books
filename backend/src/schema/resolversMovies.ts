@@ -2,7 +2,7 @@ import { tmdbService } from '../services/tmdbApi';
 
 export const resolversMovies = {
   Query: {
-    popularMovies: async () => {
+    getPopularMovies: async () => {
       return await tmdbService.getPopularMovies();
     },
     genres: async () => {

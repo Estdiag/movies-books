@@ -1,1 +1,1 @@
-export const helloShared = () => 'hello from shared';
+export * from './movies.type';

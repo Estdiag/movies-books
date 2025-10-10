@@ -18,7 +18,7 @@ export const typeDefs = gql`
   }
 
   type Query {
-    popularMovies: [Movie!]!
+    getPopularMovies: [Movie!]!
     genres: [Genre!]!
     moviesByFilter(
       genreId: Int
