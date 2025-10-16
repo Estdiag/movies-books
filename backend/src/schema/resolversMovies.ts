@@ -2,8 +2,8 @@ import { tmdbService } from '../services/tmdbApi';
 
 export const resolversMovies = {
   Query: {
-    getPopularMovies: async () => {
-      return await tmdbService.getPopularMovies();
+    getPopularMovies: async (_: any, args: { page: number }) => {
+      return await tmdbService.getPopularMovies(args);
     },
     genres: async () => {
       return await tmdbService.getGenres();

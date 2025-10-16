@@ -6,6 +6,9 @@ export type Movie = {
     poster_path: string,
     overview: string,
     vote_average: number,
-    genre_ids: number[]
+    genres: string[],
+    genre_ids: number[],
+    poster_path_200?: string,
+    poster_path_500?: string,
 };
 

@@ -1,12 +1,14 @@
+import { BrowserRouter } from "react-router";
 import { MoviesList } from "./components/MoviesList"
 
-function App() {
-  
-
+function App() { 
   return (
-    <div >
+    <BrowserRouter>
+    <div className="p-10">
       <MoviesList/>
     </div>
+    </BrowserRouter>
+    
   )
 }
 

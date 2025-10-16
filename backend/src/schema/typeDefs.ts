@@ -7,9 +7,10 @@ export const typeDefs = gql`
     original_title: String!
     release_date: String
     overview: String
-    poster_path: String
+    poster_path_200: String
+    poster_path_500: String
     vote_average: Float
-    genre_ids: [Int]
+    genres: [String!]!
   }
 
   type Genre {
@@ -17,8 +18,14 @@ export const typeDefs = gql`
     name: String!
   }
 
+  type MoviesResponse {
+    page: Int!
+    totalPages: Int!
+    results: [Movie!]!
+  }
+
   type Query {
-    getPopularMovies: [Movie!]!
+    getPopularMovies(page: Int): MoviesResponse!
     genres: [Genre!]!
     moviesByFilter(
       genreId: Int
